@@ -38,7 +38,6 @@
                         "items": {
                             "description": "A CLI option assignment operator for the current command",
                             "type": "string",
-                            "minLength": 1,
                             "maxLength": 1,
                             "default": " ",
                             "examples": [

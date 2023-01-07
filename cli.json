@@ -33,7 +33,7 @@
                         }
                     },
                     "assignmentOperators": {
-                        "description": "CLI option assignment operators for the current command",
+                        "description": "CLI option assignment operators for the current command\nIf value can be sticked to an option use `` assignment operator",
                         "type": "array",
                         "items": {
                             "description": "A CLI option assignment operator for the current command",

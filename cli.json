@@ -23,7 +23,8 @@
                     "items": {
                         "description": "A CLI option alias for the current command",
                         "type": "string",
-                        "minLength": 1
+                        "minLength": 1,
+                        "pattern": "^(/.+|--?.+)$"
                     }
                 },
                 "assignmentOperators": {

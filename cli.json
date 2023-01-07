@@ -189,6 +189,11 @@
                 },
                 "subcommands": {
                     "$ref": "#/definitions/subcommand"
+                },
+                "enableAdditionalSubcommands": {
+                    "description": "Whether to permit passing not mentioned subcommands",
+                    "type": "boolean",
+                    "default": false
                 }
             },
             "additionalProperties": false
@@ -238,6 +243,11 @@
             "items": {
                 "$ref": "#/definitions/subcommand"
             }
+        },
+        "enableAdditionalSubcommands": {
+            "description": "Whether to permit passing not mentioned subcommands",
+            "type": "boolean",
+            "default": false
         }
     },
     "additionalProperties": false

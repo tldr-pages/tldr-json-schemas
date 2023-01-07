@@ -166,6 +166,10 @@
                             "const": "any"
                         },
                         {
+                            "type": "string",
+                            "const": "none"
+                        },
+                        {
                             "type": "array",
                             "uniqueItems": true,
                             "items": {
@@ -211,6 +215,10 @@
                 {
                     "type": "string",
                     "const": "any"
+                },
+                {
+                    "type": "string",
+                    "const": "none"
                 },
                 {
                     "type": "array",

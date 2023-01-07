@@ -32,17 +32,21 @@
                             "minLength": 1
                         }
                     },
-                    "assignmentOperator": {
-                        "description": "A CLI option assignment operator for the current command",
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 1,
-                        "default": " ",
-                        "examples": [
-                            " ",
-                            "=",
-                            ":"
-                        ]
+                    "assignmentOperators": {
+                        "description": "CLI option assignment operators for the current command",
+                        "type": "array",
+                        "items": {
+                            "description": "A CLI option assignment operator for the current command",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "default": " ",
+                            "examples": [
+                                " ",
+                                "=",
+                                ":"
+                            ]
+                        }
                     },
                     "argumentType": {
                         "description": "A CLI option argument type for the current command\nUse `none` when no argument expected; use `custom` for defining custom argument type",

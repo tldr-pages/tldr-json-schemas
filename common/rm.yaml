@@ -3,20 +3,32 @@ options:
     aliases:
       - -d
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "
   - description: Attempt to remove the files without prompting for confirmation
     aliases:
       - -f
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "
   - description: Request confirmation before attempting to remove each file
     aliases:
       - -i
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "
   - description: >
       Request confirmation once if more than three files are being removed or if
       a directory is being recursively removed
     aliases:
       - -I
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "
   - description: >
       Attempt to remove the file hierarchy rooted in each file
       argument
@@ -24,16 +36,28 @@ options:
       - -r
       - -R
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "
   - description: >
       Be verbose when deleting files, showing them as they are removed
     aliases:
       - -v
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "
   - description: Attempt to undelete the named files
     aliases:
       - -W
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "
   - description: When removing a hierarchy, do not cross mount points
     aliases:
       - -x
     argumentType: none
+    assignmentOperators:
+      - ""
+      - " "

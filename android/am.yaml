@@ -1,0 +1,5 @@
+subcommands:
+  - description: Start a specific activity
+    aliases:
+      - start
+    options: any

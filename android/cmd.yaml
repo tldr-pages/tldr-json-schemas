@@ -1,0 +1,6 @@
+options:
+  - description: "[l]ist all running services"
+    aliases:
+      - -l
+enableAdditionalOptions: true
+enableAdditionalSubcommands: true

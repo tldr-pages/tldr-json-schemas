@@ -1,0 +1,10 @@
+options:
+  - description: Display a [p]rogress of a running operation
+    aliases:
+      - -p
+  - description: Display [v]ersion
+    aliases:
+      - -v
+  - description: Display [h]elp
+    aliases:
+      - -h

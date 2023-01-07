@@ -42,6 +42,7 @@
                             "maxLength": 1,
                             "default": " ",
                             "examples": [
+                                "",
                                 " ",
                                 "=",
                                 ":"

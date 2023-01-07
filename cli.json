@@ -131,6 +131,62 @@
                 }
             },
             "additionalProperties": false
+        },
+        "subcommand": {
+            "title": "cli subcommand",
+            "description": "A CLI subcommand for the current command",
+            "type": "object",
+            "required": [
+                "description",
+                "aliases"
+            ],
+            "properties": {
+                "description": {
+                    "description": "A CLI subcommand description for the current command",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "aliases": {
+                    "description": "A CLI subcommand aliases for the current command",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                        "description": "A CLI subcommand alias for the current command",
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[^-/].*$"
+                    }
+                },
+                "options": {
+                    "description": "List of all CLI options for the current command",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "$ref": "#/definitions/option"
+                    }
+                },
+                "exclusiveOptions": {
+                    "description": "Lists of exclusive CLI options for the current command",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "description": "Exclusive CLI options for the current command",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                            "description": "A CLI option for the current command",
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    }
+                },
+                "subcommands": {
+                    "$ref": "#/definitions/subcommand"
+                }
+            },
+            "additionalProperties": false
         }
     },
     "description": "CLI schema for commands",
@@ -163,6 +219,14 @@
                     "type": "string",
                     "minLength": 1
                 }
+            }
+        },
+        "subcommands": {
+            "description": "List of all CLI subcommands for the current command",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "$ref": "#/definitions/subcommand"
             }
         }
     },

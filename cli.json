@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "CLI schema for commands",
+    "type": "object",
+    "properties": {
+        "options": {
+            "description": "List of all CLI options for the current command",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "title": "cli option",
+                "description": "A CLI option for the current command",
+                "type": "object",
+                "required": [
+                    "description",
+                    "aliases"
+                ],
+                "properties": {
+                    "description": {
+                        "description": "A CLI option description for the current command",
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "aliases": {
+                        "description": "A CLI option aliases for the current command",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                            "description": "A CLI option alias for the current command",
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    },
+                    "assignmentOperator": {
+                        "description": "A CLI option assignment operator for the current command",
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1,
+                        "default": " ",
+                        "examples": [
+                            " ",
+                            "=",
+                            ":"
+                        ]
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "exclusiveOptions": {
+            "description": "Lists of exclusive CLI options for the current command",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "description": "Exclusive CLI options for the current command",
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": {
+                    "description": "A CLI option for the current command",
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        }
+    },
+    "additionalProperties": false
+}

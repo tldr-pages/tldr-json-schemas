@@ -1,0 +1,12 @@
+{
+    "yaml.schemas": {
+        "cli.json": [
+            "android/*.yaml",
+            "common/*.yaml",
+            "linux/*.yaml",
+            "osx/*.yaml",
+            "sunos/*.yaml",
+            "windows/*.yaml",
+        ]
+    }
+}

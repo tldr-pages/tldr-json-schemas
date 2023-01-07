@@ -160,23 +160,11 @@
                 },
                 "options": {
                     "description": "List of all CLI options for the current command",
-                    "oneOf": [
-                        {
-                            "type": "string",
-                            "const": "any"
-                        },
-                        {
-                            "type": "string",
-                            "const": "none"
-                        },
-                        {
-                            "type": "array",
-                            "uniqueItems": true,
-                            "items": {
-                                "$ref": "#/definitions/option"
-                            }
-                        }
-                    ]
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "$ref": "#/definitions/option"
+                    }
                 },
                 "exclusiveOptions": {
                     "description": "Lists of exclusive CLI options for the current command",
@@ -193,6 +181,11 @@
                             "minLength": 1
                         }
                     }
+                },
+                "enableAdditionalOptions": {
+                    "description": "Whether to permit passing not mentioned options",
+                    "type": "boolean",
+                    "default": false
                 },
                 "subcommands": {
                     "$ref": "#/definitions/subcommand"
@@ -211,23 +204,11 @@
         },
         "options": {
             "description": "List of all CLI options for the current command",
-            "oneOf": [
-                {
-                    "type": "string",
-                    "const": "any"
-                },
-                {
-                    "type": "string",
-                    "const": "none"
-                },
-                {
-                    "type": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "$ref": "#/definitions/option"
-                    }
-                }
-            ]
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "$ref": "#/definitions/option"
+            }
         },
         "exclusiveOptions": {
             "description": "Lists of exclusive CLI options for the current command",
@@ -244,6 +225,11 @@
                     "minLength": 1
                 }
             }
+        },
+        "enableAdditionalOptions": {
+            "description": "Whether to permit passing not mentioned options",
+            "type": "boolean",
+            "default": false
         },
         "subcommands": {
             "description": "List of all CLI subcommands for the current command",

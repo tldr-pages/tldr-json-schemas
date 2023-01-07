@@ -16,5 +16,5 @@ it's possible to standardize their format quickly.
 ## How it works?
 
 All JSON schemas map to the TlDr pages in the same locations. For instance
-`common/rm.yaml` maps to `common/rm.md` and specifies how to interpret it's
+[`common/rm.yaml`](./common/rm.yaml) maps to [`common/rm.md`](https://github.com/tldr-pages/tldr/blob/main/pages/common/rm.md) and specifies how to interpret it's
 options which allows TlDr clients validate CLI in CI.

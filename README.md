@@ -12,6 +12,7 @@ it's possible to standardize their format quickly.
   reading man page what `-ab` is:
   - two joined short options, or
   - one option with a sticked value
+- Enable complex executable invokations linting such as `find`
 
 ## How it works?
 

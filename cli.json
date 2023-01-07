@@ -3,6 +3,11 @@
     "description": "CLI schema for commands",
     "type": "object",
     "properties": {
+        "enableJoiningShortOptions": {
+            "description": "Whether to permit join short options",
+            "type": "boolean",
+            "default": "false"
+        },
         "options": {
             "description": "List of all CLI options for the current command",
             "type": "array",

@@ -160,11 +160,19 @@
                 },
                 "options": {
                     "description": "List of all CLI options for the current command",
-                    "type": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "$ref": "#/definitions/option"
-                    }
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "const": "any"
+                        },
+                        {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "$ref": "#/definitions/option"
+                            }
+                        }
+                    ]
                 },
                 "exclusiveOptions": {
                     "description": "Lists of exclusive CLI options for the current command",
@@ -199,11 +207,19 @@
         },
         "options": {
             "description": "List of all CLI options for the current command",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                "$ref": "#/definitions/option"
-            }
+            "oneOf": [
+                {
+                    "type": "string",
+                    "const": "any"
+                },
+                {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "$ref": "#/definitions/option"
+                    }
+                }
+            ]
         },
         "exclusiveOptions": {
             "description": "Lists of exclusive CLI options for the current command",

@@ -1,3 +1,4 @@
+enableJoiningShortOptions: true
 options:
   - description: Attempt to remove directories as well as other types of files
     aliases:
